@@ -184,4 +184,11 @@ header .navigation-items a:hover::before {
         background-position: center;
         transition: 0.3s ease;
     }
+
+    /*main*/
+    .content {
+        padding: 100px 20px;
+    }
+
+    
 }
