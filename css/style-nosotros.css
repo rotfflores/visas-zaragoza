@@ -190,5 +190,15 @@ header .navigation-items a:hover::before {
         padding: 100px 20px;
     }
 
-    
+    .img-somos {
+        width: 300px;
+    }
+
+    .img-exp {
+        width: 300px;
+    }
 }
+
+    /***************************************SERVICIOS***************************************/
+
+    
