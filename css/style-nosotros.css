@@ -69,12 +69,10 @@ header .navigation-items a:hover::before {
     justify-content: space-around;
     align-items: center;
     gap: 50px;
-    margin: 75px auto;
-    background-color: blue;
 }
 
 .img-somos {
-    width: 70%;
+    width: 400px;
     height: auto;
 }
 
@@ -84,24 +82,26 @@ header .navigation-items a:hover::before {
     justify-content: space-around;
     align-items: center;
     gap: 50px;
+    margin-top: 50px;
 }
 
 .img-exp {
-    width: 50%;
+    width: 400px;
     height: auto;
     border-radius: 50px;
 }
 
-[data-animation="fade"] {
+[data-animation="right"] {
     opacity: 0;
-    transform: translate(100%);
-    transition: opacity .6s ease-in, transform .6s ease-in;
+    transform: translateX(50px);
+    transition: transform .6s ease-in, opacity .6s ease-in;
+
 }
 
-[data-animation="show"] {
+[data-animation="left"] {
     opacity: 0;
-    transform: translateY(100%);
-    transition: opacity .6s ease-in, transform .6s ease-in;
+    transform: translateX(-50px);
+    transition: transform .6s ease-in, opacity .6s ease-in;
 }
 
 .unset {
