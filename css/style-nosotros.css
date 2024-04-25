@@ -82,7 +82,7 @@ header .navigation-items a:hover::before {
     justify-content: space-around;
     align-items: center;
     gap: 50px;
-    margin-top: 50px;
+    margin: 50px 0;
 }
 
 .img-exp {
