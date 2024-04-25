@@ -200,5 +200,16 @@ header .navigation-items a:hover::before {
 }
 
     /***************************************SERVICIOS***************************************/
+/* Path: css/style-servicios.css */
+.banner {
+    background: url(../img/banner-servicios.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    text-align: center;
+}
 
-    
