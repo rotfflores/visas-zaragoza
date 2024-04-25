@@ -31,7 +31,7 @@ header .navigation {
 
 header .navigation-items a {
     position: relative;
-    color: #000000;
+    color: #ffffff;
     font-size: 1em;
     font-weight: 500;
     text-decoration: none;
@@ -42,7 +42,7 @@ header .navigation-items a {
 header .navigation-items a::before {
     content: '';
     position: absolute;
-    background: #000000;
+    background: #ffffff;
     width: 0;
     height: 2px;
     bottom: 0;
@@ -55,58 +55,78 @@ header .navigation-items a:hover::before {
     
 }
 
-/*main*/
-.content {
-    margin-top: 20px;
-    padding: 100px 200px;
+/***************MAIN****************/
+
+.banner {
+    background: url(../img/banner-servicios.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: #ffffff;
+    text-align: center;
+    position: relative, fixed;
+    
+}
+
+.banner-content {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: flex-end;
+    padding-right: 30px;
 }
 
-.content-somos {
+.banner-content h1 {
+    font-size: 3em;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+
+}
+
+.banner-content p {
+    font-size: 1.2em;
+    font-weight: 300;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+
+}
+
+.ambas-listas {
     display: flex;
-    justify-content: space-around;
-    align-items: center;
-    gap: 50px;
+    justify-content: space-between;
+    margin-top: 50px;
+    position: absolute;
 }
 
-.img-somos {
-    width: 400px;
-    height: auto;
+.banner-visas {
+    width: 45%;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+    padding: 20px;
+    margin: 10px;
 }
 
-.content-experiencia {
-    display: flex;
-    flex-direction: row-reverse;
-    justify-content: space-around;
-    align-items: center;
-    gap: 50px;
-    margin: 50px 0;
+.banner-visas h2 {
+    font-size: 2em;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-transform: uppercase;
 }
 
-.img-exp {
-    width: 400px;
-    height: auto;
-    border-radius: 50px;
-}
-
-[data-animation="right"] {
-    opacity: 0;
-    transform: translateX(50px);
-    transition: transform .6s ease-in, opacity .6s ease-in;
-
-}
-
-[data-animation="left"] {
-    opacity: 0;
-    transform: translateX(-50px);
-    transition: transform .6s ease-in, opacity .6s ease-in;
-}
-
-.unset {
-    opacity: var(--opacity);
-    transform: var(--transform);
+.banner-visas li {
+    font-size: 1.2em;
+    font-weight: 300;
+    margin-bottom: 20px;
+    text-transform: uppercase;
 }
 
 
@@ -184,59 +204,4 @@ header .navigation-items a:hover::before {
         background-position: center;
         transition: 0.3s ease;
     }
-
-    /*main*/
-    .content {
-        padding: 100px 20px;
-    }
-
-    .img-somos {
-        width: 300px;
-    }
-
-    .img-exp {
-        width: 300px;
-    }
 }
-
-    /***************************************SERVICIOS***************************************/
-/* Path: css/style-servicios.css */
-.banner {
-    background: url(../img/banner-servicios.jpg) no-repeat;
-    background-size: cover;
-    background-position: center;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #ffffff;
-    text-align: center;
-    
-}
-
-.banner-content {
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    padding: 20px;
-    border-radius: 5px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-}
-
-.banner-content h1 {
-    font-size: 3em;
-    font-weight: 700;
-    margin-bottom: 20px;
-}
-
-.banner-content p {
-    font-size: 1.2em;
-    font-weight: 300;
-    margin-bottom: 20px;
-}
-
-
-
