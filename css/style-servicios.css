@@ -57,41 +57,48 @@ header .navigation-items a:hover::before {
 
 /***************MAIN****************/
 
-.banner {
+.main {
     background: url(../img/banner-servicios.jpg) no-repeat;
     background-size: cover;
     background-position: center;
-    height: 100vh;
+    min-height: 100vh;
+    width: 100%;
     display: flex;
     justify-content: space-around;
     align-items: center;
     color: #ffffff;
     text-align: center;
-    position: relative, fixed;
-    
+    position: fixed ;
+    background-attachment: fixed;
+}
+
+.banner {
+    background-color: rgba(1, 1, 1, 0.5);
+    width: 100%;
+    height: 100%;
 }
 
 .banner-content {
-    background-color: rgba(1, 1, 1, 0.5);
-    height: 100%;
-    width: 100%;
-    position: relative;
     display: flex;
     flex-direction: row-reverse;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
+    padding: 150px 75px;
 }
 
-.banner-content h1 {
-    font-size: 3em;
-    font-weight: 700;
-    margin: 20px;
+.banner-title {
+    text-align: center;
+    padding: 10px;
 }
 
-.banner-content h2 {
-    font-size: 2em;
+.banner-title h2 {
+    font-size: 1.3em;
+    text-transform: uppercase;
+}
+
+.banner-title p {
+    font-size: 1em;
     font-weight: 300;
-    margin: 20px;
 }
 
 .banner-list {
@@ -99,53 +106,57 @@ header .navigation-items a:hover::before {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 20px;
-    gap: 20px;
+    row-gap: 20px;
 }
 
-.banner-list li {
+.banner-element {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 20px;
+    background-color: rgba(1, 1, 1, 0.5);
+    padding: 20px;
+}
+
+.banner-element:hover {
+    background-color: rgba(1, 1, 1, 0.7);
+    box-shadow: 0 5px 25px rgba(1, 1, 1, 20%);
+    cursor: pointer;
+}
+
+.banner-element-h2 {
+    font-size: 1.2em;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.banner-element-h3 {
+    font-size: 1em;
+    font-weight: 300;
+}
+
+.banner-element-h2, .banner-element-h3 {
+    flex: 1;
+}
+
+.banner-steps {
+    flex: 2;
+}
+
+.banner-steps li {
     list-style: none;
-    margin: 10px;
+    font-size: 1em;
+    font-weight: 300;
     text-align: left;
 }
-
-.banner-visa {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: rgba(1, 1, 1, 0.5);
-    color: #ffffff;
-    text-align: center;
-    padding: 20px;
-}
-
-.banner-vista h1, h2 {
-    width: 25%
-}
-
-.banner-passport {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: rgba(1, 1, 1, 0.5);
-    color: #ffffff;
-    text-align: center;
-    padding: 20px;
-}
-
-.banner-passport h1, h2 {
-    width: 25%
-}
-
 
 
 @media (max-width: 1000px) {
     header {
         padding: 12px 20px;
+        position: fixed;
+        top: 0;
+        z-index: 9999;
     }
 
     section {
@@ -166,6 +177,7 @@ header .navigation-items a:hover::before {
         justify-content: center;
         align-items: center;
         background: rgb(1, 1, 1, 0.5s);
+
     }
 
     header .navigation .navigation-items a {
@@ -188,7 +200,8 @@ header .navigation-items a:hover::before {
         align-items: center;
         width: 100%;
         left: 0;
-        position: absolute;
+        position: fixed;
+        top: 0;
         margin: 20px;
         padding: 40px;
         display: flex;
@@ -198,10 +211,8 @@ header .navigation-items a:hover::before {
         box-shadow: 0 5px 25px rgba(1, 1, 1, 20%);
     }
 
-
-
     .menu-btn {
-        background: url(../img/menu.png) no-repeat;
+        background: url(../img/menuw.png) no-repeat;
         background-size: 40px;
         background-position: center;
         width: 40px;
@@ -217,4 +228,20 @@ header .navigation-items a:hover::before {
         background-position: center;
         transition: 0.3s ease;
     }
+
+    /*banner*/
+    .main {
+        height: 100%;
+    }
+
+    .banner {
+        overflow: auto;
+    }
+
+    .banner-content {
+        flex-direction: column;
+        padding: 50px 20px;
+    }
+
+
 }
