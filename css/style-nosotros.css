@@ -190,53 +190,9 @@ header .navigation-items a:hover::before {
         padding: 100px 20px;
     }
 
-    .img-somos {
-        width: 300px;
+    .img-us {
+        width: 200px;
     }
 
-    .img-exp {
-        width: 300px;
-    }
 }
-
-    /***************************************SERVICIOS***************************************/
-/* Path: css/style-servicios.css */
-.banner {
-    background: url(../img/banner-servicios.jpg) no-repeat;
-    background-size: cover;
-    background-position: center;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #ffffff;
-    text-align: center;
-    
-}
-
-.banner-content {
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    padding: 20px;
-    border-radius: 5px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-}
-
-.banner-content h1 {
-    font-size: 3em;
-    font-weight: 700;
-    margin-bottom: 20px;
-}
-
-.banner-content p {
-    font-size: 1.2em;
-    font-weight: 300;
-    margin-bottom: 20px;
-}
-
-
 
