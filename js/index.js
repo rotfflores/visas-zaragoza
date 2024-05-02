@@ -84,3 +84,14 @@ const observer = new IntersectionObserver(trigggerAnimation, options);
 images.forEach(image => {
     observer.observe(image);
 });
+
+///////////////////////////////////////////////////////////////////////////////////////////
+// SERVICIOS//
+var bannerElements = document.querySelectorAll('.banner-element');
+
+bannerElements.forEach(function(element) {
+    element.addEventListener('click', function() {
+        window.location.href = 'contacto.html';
+    });
+});
+
