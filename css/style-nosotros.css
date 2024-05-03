@@ -196,3 +196,17 @@ header .navigation-items a:hover::before {
 
 }
 
+@media screen and (max-width: 600px) {
+    .content-somos {
+        flex-direction: column;
+    }
+
+    .content-experiencia {
+        flex-direction: column;
+    }
+
+    .img-exp {
+        width: 300px;
+    }
+    
+}
