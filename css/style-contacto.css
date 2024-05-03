@@ -90,6 +90,22 @@ header .navigation-items a:hover::before {
     margin: 20px;
 }
 
+.button-media {
+    margin: 7px;
+    transition: 0.3s ease;
+    border: none;
+    background: rgba(1, 1, 1, 0.5);
+    color: #ffffff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.button-media:hover {
+    background: rgba(1, 1, 1, 0.8);
+}
+
+
 /****************************************************/
 @media (max-width: 1000px) {
     header {
