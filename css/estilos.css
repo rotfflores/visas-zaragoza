@@ -249,5 +249,10 @@ section {
         background-position: center;
         transition: 0.3s ease;
     }
+
+    #naturaleza {
+        margin: 0;
+        font-size: 0.8em;
+    }
 }
 
