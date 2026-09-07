@@ -237,14 +237,11 @@ p { font-weight: 400; }
 .social-card { position: relative; overflow: hidden; min-height: 260px; padding: 28px; display: flex; flex-direction: column; color: var(--ink); background: var(--white); border: 1px solid var(--line); text-decoration: none; transition: transform .25s, box-shadow .25s, color .25s, background .25s; }
 .social-card:hover { color: var(--white); background: var(--ink); box-shadow: 0 24px 55px rgba(16,42,67,.16); transform: translateY(-7px); }
 .social-card--whatsapp { color: var(--white); background: var(--blue); border-color: var(--blue); }
-.social-card--pending { cursor: default; }
-.social-card--pending:hover { color: var(--ink); background: var(--white); box-shadow: none; transform: none; }
 .social-card > span:not(.social-logo) { font-size: .72rem; font-weight: 600; letter-spacing: .13em; text-transform: uppercase; }
 .social-logo { width: 52px; height: 52px; margin: 26px 0 22px; display: grid; place-items: center; color: currentColor; background: rgba(115,129,156,.1); border: 1px solid currentColor; border-radius: 16px; transition: transform .25s, border-radius .25s, background .25s; }
 .social-card--whatsapp .social-logo { background: rgba(255,255,255,.12); }
 .social-logo svg, .social-logo img { width: 27px; height: 27px; object-fit: contain; }
 .social-card:hover .social-logo { background: rgba(255,255,255,.1); border-radius: 50%; transform: scale(1.06); }
-.social-card--pending:hover .social-logo { background: rgba(115,129,156,.1); border-radius: 16px; transform: none; }
 .social-card strong { margin-top: auto; font-size: clamp(1.7rem, 2.6vw, 2.8rem); font-weight: 700; }
 .social-card small { margin-top: 6px; color: currentColor; opacity: .7; font-size: .78rem; overflow-wrap: anywhere; }
 .social-card b { position: absolute; right: 25px; top: 21px; font-size: 1.7rem; font-weight: 400; transition: transform .25s; }
