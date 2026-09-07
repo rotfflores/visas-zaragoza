@@ -119,7 +119,20 @@ if (appointmentForm) {
     const submitButton = appointmentForm.querySelector('.form-submit');
     const formStatus = appointmentForm.querySelector('#form-status');
     const selectedService = new URLSearchParams(window.location.search).get('servicio');
-    const validServices = ['visa', 'pasaporte', 'naturalizacion'];
+    const validServices = [
+        'visa',
+        'visa-canada',
+        'renovaciones',
+        'renovacion-visa',
+        'pasaporte',
+        'renovacion-pasaporte',
+        'naturalizacion',
+        'actas',
+        'acta-nacimiento',
+        'acta-defuncion',
+        'acta-matrimonio',
+        'acta-divorcio'
+    ];
 
     if (validServices.includes(selectedService)) serviceSelect.value = selectedService;
 
