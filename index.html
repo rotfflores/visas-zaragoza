@@ -1,54 +1,116 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gestion de visas - Zaragoza</title>
-    <link rel="stylesheet" href="css/estilos.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Gestión de Visas Zaragoza: orientación para visas de Estados Unidos, pasaportes y naturalización mexicana.">
+    <title>Gestión de Visas Zaragoza</title>
     <link rel="icon" type="image/png" href="img/logo-black.png">
+    <link rel="stylesheet" href="css/estilos.css">
 </head>
-<body>
-    <div id="preloader"></div>
-
-    <header>
-        <a href="index.html" class="img-logo"><img src="img/logo.png"></a>
-        <div class="menu-btn"></div>
-
-        <nav class="navigation">
-            <div class="navigation-items">
-                <a href="index.html"><strong>Inicio</strong></a>
-                <a href="nosotros.html">Nosotros</a>
-                <a href="servicios.html">Servicios</a>
-                <a href="contacto.html">Contacto</a>
-            </div>
+<body class="page-home">
+    <a class="skip-link" href="#contenido">Saltar al contenido</a>
+    <header class="site-header site-header--light" data-header>
+        <a class="brand" href="index.html" aria-label="Gestión de Visas Zaragoza, inicio">
+            <img src="img/logo.png" alt="" width="58" height="58">
+            <span><b>Gestión de Visas</b><small>Zaragoza</small></span>
+        </a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-navigation" aria-label="Abrir menú"><span></span><span></span></button>
+        <nav class="site-nav" id="site-navigation" aria-label="Navegación principal">
+            <a href="index.html" aria-current="page">Inicio</a>
+            <a href="nosotros.html">Nosotros</a>
+            <a href="servicios.html">Servicios</a>
+            <a class="nav-action" href="contacto.html">Hablemos</a>
         </nav>
     </header>
 
-    <section class="home">
-        <video id="video" class="video video-slide active" src="videos/background-city.mp4" autoplay loop muted></video>
-        <video id="video-2" class=" video video-slide" src="videos/backround-nature.mp4" autoplay loop muted></video>
-        <video id="video-3" class="video video-slide" src="videos/background-family.mp4" autoplay loop muted></video>
-        <div class="content active">
-            <h1>Disfruta de las <br>Ciudades</h1>
-            <p>Desde los rascacielos imponentes de Nueva York hasta los vibrantes barrios de San Francisco, Estados Unidos te espera con un sinfín de experiencias urbanas. Sumérgete en la diversidad cultural, la gastronomía única y la arquitectura icónica que solo las ciudades americanas pueden ofrecer.</p>
-        </div>
-        <div class="content">
-            <h1>Explora de la <br><span id="naturaleza">Naturaleza</span></h1>
-            <p>Ya sea que busques aventuras llenas de adrenalina como rafting en aguas bravas o simplemente relajarte en entornos naturales tranquilos, Estados Unidos ofrece una amplia gama de actividades al aire libre para todos los gustos y edades.</p>
-        </div>
-        <div class="content">
-            <h1>Momentos <br>Familiares</h1>
-            <p>Vive momentos de risas, aventuras y conexiones familiares mientras exploras los parques de diversiones más emocionantes del mundo, te sumerges en la historia de los monumentos nacionales o disfrutas de días soleados en las playas de arena blanca. con tu familia</p>
-        </div>
-        <div class="slider-navigation">
-            <div class="nav-btn active"></div>
-            <div class="nav-btn"></div>
-            <div class="nav-btn"></div>
-        </div>
-    </section>
+    <main id="contenido">
+        <section class="video-hero">
+            <video class="video-hero__media" autoplay loop muted playsinline poster="img/banner-servicios.jpg" aria-hidden="true">
+                <source src="videos/background-city.mp4" type="video/mp4">
+            </video>
+            <div class="video-hero__veil"></div>
+            <div class="shell video-hero__layout">
+                <div class="video-hero__copy">
+                    <p class="kicker">Visas, pasaportes y naturalización</p>
+                    <h1>Tu próximo viaje empieza <em>con un buen trámite.</em></h1>
+                    <p>Ordenamos el proceso contigo: información, formularios, pagos y citas, explicados sin rodeos.</p>
+                    <div class="hero-actions">
+                        <a class="pill pill--glass" href="https://wa.me/524981099717?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20el%20tr%C3%A1mite%20de%20visa" target="_blank" rel="noopener noreferrer">Escribir por WhatsApp <svg class="arrow-icon arrow-icon--up" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+                    </div>
+                </div>
+                <aside class="hero-ticket" aria-label="Resumen del servicio">
+                    <span class="hero-ticket__eyebrow">Acompañamiento</span>
+                    <strong>De la solicitud<br>a la cita.</strong>
+                    <div><span>Experiencia</span><b>Más de doce años</b></div>
+                    <div><span>Modalidad</span><b>Personal · Remota</b></div>
+                </aside>
+            </div>
+        </section>
 
+        <section class="intro-block">
+            <div class="shell intro-grid">
+                <div class="section-mark"><p>Lo hacemos<br>más sencillo</p></div>
+                <div class="intro-copy">
+                    <p class="kicker kicker--blue">Menos incertidumbre. Más claridad.</p>
+                    <h2>Un trámite importante merece atención a los detalles.</h2>
+                    <p class="lead">Te ayudamos a entender qué sigue, reunir la información correcta y evitar errores comunes antes de tus citas.</p>
+                </div>
+            </div>
+        </section>
 
-<script src="js/index.js"></script>
+        <section class="service-lines" aria-labelledby="servicios-titulo">
+            <div class="shell">
+                <h2 id="servicios-titulo" class="visually-hidden">Servicios</h2>
+                <a class="service-line" href="servicios.html#visa">
+                    <span class="service-line__title">Visa estadounidense</span>
+                    <span class="service-line__meta">DS-160 · pago · citas</span>
+                    <svg class="service-line__arrow arrow-icon arrow-icon--up" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </a>
+                <a class="service-line" href="servicios.html#pasaporte">
+                    <span class="service-line__title">Pasaporte mexicano</span>
+                    <span class="service-line__meta">Requisitos · revisión · cita</span>
+                    <svg class="service-line__arrow arrow-icon arrow-icon--up" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </a>
+                <a class="service-line" href="servicios.html#naturalizacion">
+                    <span class="service-line__title">Naturalización mexicana</span>
+                    <span class="service-line__meta">Modalidad · documentos · seguimiento</span>
+                    <svg class="service-line__arrow arrow-icon arrow-icon--up" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </a>
+            </div>
+        </section>
+
+        <section class="journey-story">
+            <div class="shell journey-grid">
+                <figure class="journey-photo">
+                    <img src="img/familia-aeropuerto.jpg" alt="Madre e hija preparadas para viajar en un aeropuerto" loading="lazy" width="1600" height="1067">
+                    <figcaption>El objetivo no es el formulario.<br>Es lo que viene después.</figcaption>
+                </figure>
+                <div class="journey-copy">
+                    <p class="kicker kicker--blue">Más de doce años de experiencia</p>
+                    <h2>Tu historia de viaje es única. Tu orientación también.</h2>
+                    <p>No trabajamos con respuestas genéricas. Escuchamos tu caso, revisamos contigo y te indicamos el siguiente paso con claridad.</p>
+                    <a class="link-arrow" href="nosotros.html">Conócenos <svg class="arrow-icon arrow-icon--right" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta-band">
+            <div class="shell cta-band__layout">
+                <div><p class="kicker">Da el primer paso</p><h2>Cuéntanos qué trámite necesitas.</h2></div>
+                <a class="cta-link" href="contacto.html">Hablemos</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="shell footer-main">
+            <a class="brand brand--footer" href="index.html"><img src="img/logo.png" alt="" width="58" height="58"><span><b>Gestión de Visas</b><small>Zaragoza</small></span></a>
+            <div class="footer-links"><a href="nosotros.html">Nosotros</a><a href="servicios.html">Servicios</a><a href="contacto.html">Contacto</a></div>
+            <div class="footer-contact"><a href="tel:+524981099717">+52 498 109 9717</a><span>Correo: por confirmar</span><a href="https://www.instagram.com/visaszaragoza/" target="_blank" rel="noopener noreferrer">Instagram: @visaszaragoza</a></div>
+        </div>
+        <div class="shell footer-bottom"><span>© <span data-year></span> Gestión de Visas Zaragoza</span><span>Servicio independiente de asesoría. Las resoluciones dependen de las autoridades correspondientes.</span><span>Fotos: <a href="https://www.pexels.com/" target="_blank" rel="noopener noreferrer">Pexels</a> / <a href="https://unsplash.com/" target="_blank" rel="noopener noreferrer">Unsplash</a></span></div>
+    </footer>
+    <script src="js/index.js"></script>
 </body>
 </html>
