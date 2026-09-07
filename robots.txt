@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://rotfflores.github.io/visas-zaragoza/sitemap.xml
+Sitemap: https://gestiondevisaszaragoza.com/sitemap.xml
