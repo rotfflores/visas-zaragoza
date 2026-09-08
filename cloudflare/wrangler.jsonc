@@ -1,0 +1,29 @@
+{
+  "$schema": "./node_modules/wrangler/config-schema.json",
+  "name": "gestion-visas-solicitudes",
+  "account_id": "15bddc1e80835bb2d0587755b6f4a315",
+  "main": "src/index.js",
+  "compatibility_date": "2026-09-07",
+  "compatibility_flags": ["nodejs_compat"],
+  "workers_dev": false,
+  "routes": [
+    {
+      "pattern": "solicitudes.gestiondevisaszaragoza.com",
+      "custom_domain": true
+    }
+  ],
+  "vars": {
+    "ALLOWED_ORIGINS": "https://gestiondevisaszaragoza.com,https://www.gestiondevisaszaragoza.com,https://rotfflores.github.io"
+  },
+  "observability": {
+    "enabled": true,
+    "head_sampling_rate": 1
+  },
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "gestion-visas-zaragoza",
+      "database_id": "6b33f39d-91bb-4ed3-a2fa-847dce26b32b"
+    }
+  ]
+}

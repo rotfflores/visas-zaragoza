@@ -16,8 +16,9 @@
 
         <section class="booking-section" id="agendar">
             <div class="shell booking-grid">
-                <div class="booking-intro"><p class="kicker kicker--accent">Agenda una cita</p><h2>Elige el momento que prefieras.</h2><p>Completa tus datos para registrar la solicitud. Por ahora quedará guardada en este dispositivo; después conectaremos este mismo formulario con la base de datos central.</p></div>
+                <div class="booking-intro"><p class="kicker kicker--accent">Agenda una cita</p><h2>Elige el momento que prefieras.</h2><p>Completa tus datos y nuestro equipo revisará tu solicitud para confirmar la fecha y el horario contigo.</p></div>
                 <form class="appointment-form" id="appointment-form">
+                    <div class="field form-trap" aria-hidden="true"><label for="empresa">Empresa</label><input id="empresa" name="empresa" type="text" tabindex="-1" autocomplete="off"></div>
                     <div class="field field--wide"><label for="nombre">Nombre completo</label><input id="nombre" name="nombre" type="text" autocomplete="name" required placeholder="Escribe tu nombre"></div>
                     <div class="field"><label for="telefono">Teléfono</label><input id="telefono" name="telefono" type="tel" autocomplete="tel" inputmode="tel" required placeholder="Tu número de contacto"></div>
                     <div class="field"><label for="correo">Correo electrónico <span>Opcional</span></label><input id="correo" name="correo" type="email" autocomplete="email" placeholder="nombre@correo.com"></div>
@@ -25,8 +26,8 @@
                     <div class="field"><label for="fecha">Fecha preferida</label><input id="fecha" name="fecha" type="date" required></div>
                     <div class="field"><label for="horario">Horario preferido</label><select id="horario" name="horario" required><option value="">Selecciona un horario</option><option>Por la mañana</option><option>Por la tarde</option></select></div>
                     <div class="field field--wide"><label for="mensaje">Cuéntanos brevemente tu caso <span>Opcional</span></label><textarea id="mensaje" name="mensaje" rows="4" placeholder="Agrega cualquier dato que consideres importante"></textarea></div>
-                    <label class="confirmation field--wide"><input type="checkbox" required><span>Entiendo que la fecha está sujeta a confirmación.</span></label>
-                    <button class="form-submit field--wide" type="submit">Guardar solicitud de cita</button>
+                    <label class="confirmation field--wide"><input name="consentimiento" type="checkbox" required><span>Entiendo que la fecha está sujeta a confirmación y autorizo el uso de estos datos para atender mi solicitud.</span></label>
+                    <button class="form-submit field--wide" type="submit">Enviar solicitud de cita</button>
                     <p class="form-status field--wide" id="form-status" role="status" aria-live="polite"></p>
                 </form>
             </div>

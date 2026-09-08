@@ -83,35 +83,7 @@ document.querySelectorAll('a[href]').forEach((link) => {
 });
 
 const appointmentForm = document.querySelector('#appointment-form');
-
-function openAppointmentsDatabase() {
-    return new Promise((resolve, reject) => {
-        const request = window.indexedDB.open('gestion_visas_zaragoza', 1);
-
-        request.onupgradeneeded = () => {
-            const database = request.result;
-            if (database.objectStoreNames.contains('citas')) return;
-            const store = database.createObjectStore('citas', { keyPath: 'id', autoIncrement: true });
-            store.createIndex('estado', 'estado');
-            store.createIndex('creadaEn', 'creadaEn');
-        };
-        request.onsuccess = () => resolve(request.result);
-        request.onerror = () => reject(request.error);
-        request.onblocked = () => reject(new Error('No fue posible abrir la base de datos local.'));
-    });
-}
-
-async function saveAppointment(appointment) {
-    const database = await openAppointmentsDatabase();
-    return new Promise((resolve, reject) => {
-        const transaction = database.transaction('citas', 'readwrite');
-        const request = transaction.objectStore('citas').add(appointment);
-        request.onsuccess = () => resolve(request.result);
-        request.onerror = () => reject(request.error);
-        transaction.oncomplete = () => database.close();
-        transaction.onerror = () => database.close();
-    });
-}
+const appointmentsEndpoint = 'https://solicitudes.gestiondevisaszaragoza.com/api/appointments';
 
 if (appointmentForm) {
     const serviceSelect = appointmentForm.querySelector('#servicio');
@@ -155,9 +127,8 @@ if (appointmentForm) {
             fecha: String(data.get('fecha')),
             horario: String(data.get('horario')),
             mensaje: String(data.get('mensaje')).trim(),
-            estado: 'pendiente',
-            origen: 'sitio-web',
-            creadaEn: new Date().toISOString()
+            empresa: String(data.get('empresa') || '').trim(),
+            consentimiento: data.get('consentimiento') === 'on'
         };
 
         submitButton.disabled = true;
@@ -166,19 +137,25 @@ if (appointmentForm) {
         formStatus.className = 'form-status field--wide';
 
         try {
-            const appointmentId = await saveAppointment(appointment);
+            const response = await fetch(appointmentsEndpoint, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(appointment)
+            });
+            const result = await response.json().catch(() => ({}));
+            if (!response.ok || !result.ok) throw new Error(result.error || 'No fue posible registrar la solicitud.');
             const rememberedService = appointment.servicio;
             appointmentForm.reset();
             if (validServices.includes(rememberedService)) serviceSelect.value = rememberedService;
-            formStatus.textContent = `Solicitud guardada correctamente. Folio local: ${appointmentId}.`;
+            formStatus.textContent = `Solicitud enviada correctamente. Tu folio es ${result.folio}. Nos pondremos en contacto contigo para confirmar la cita.`;
             formStatus.classList.add('is-success');
         } catch (error) {
             console.error('No se pudo guardar la solicitud:', error);
-            formStatus.textContent = 'No pudimos guardar la solicitud. Revisa los permisos del navegador e inténtalo de nuevo.';
+            formStatus.textContent = 'No pudimos enviar la solicitud en este momento. Inténtalo de nuevo o escríbenos por WhatsApp.';
             formStatus.classList.add('is-error');
         } finally {
             submitButton.disabled = false;
-            submitButton.textContent = 'Guardar solicitud de cita';
+            submitButton.textContent = 'Enviar solicitud de cita';
         }
     });
 }
